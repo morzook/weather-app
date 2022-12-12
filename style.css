@@ -32,10 +32,11 @@ body{
 
 input{
     width: 45%;
+    height: 65%;
 }
 
 .hide{
-    /* visibility: hidden; */
+    visibility: hidden;
 }
 
 .check{
@@ -170,10 +171,10 @@ align-items: center;
     width: 98%;
 }
 
-.today-title{
+/* .today-title{
     height: 18%;
     font-size: 14px;
-}
+} */
 
 .boxes{
     display: flex;
@@ -181,7 +182,7 @@ align-items: center;
     justify-content: center;
     align-items: center;
     justify-content: space-around;
-    height: 80%;
+    height: 90%;
     opacity: 80%;
 
 }
@@ -189,7 +190,7 @@ align-items: center;
 .today-box-1,.today-box-2,.today-box-3, .today-box-4{
     background-color: #425d8e;
     width: 22%;
-    height: 85%;
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -201,7 +202,7 @@ align-items: center;
 
 .today-box-1-icon,.today-box-2-icon,.today-box-3-icon,.today-box-4-icon{
     height: 50%;
-    width: 60%;
+    width: 70%;
 
 }
 

@@ -1,3 +1,4 @@
+let startPage = document.querySelector(".welcome");
 let city = document.getElementById("city");
 let check = document.querySelector(".check");
 let cityName = document.querySelector(".city");
@@ -25,6 +26,12 @@ let todayBoxOneIcon = document.querySelector('.today-box-1-icon')
 let todayBoxTwoIcon = document.querySelector('.today-box-2-icon')
 let todayBoxThreeIcon = document.querySelector('.today-box-3-icon')
 let todayBoxFourIcon = document.querySelector('.today-box-4-icon')
+
+// container.classList.add('hide')
+
+
+
+
 
 
 
