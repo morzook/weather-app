@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="search-box">
+            <input type="text" id="city" placeholder="City" ab>
+            <button class="check">check weather</button>
+        </div>
+
+        <div class="city-date">
+            <div class="city"></div>
+            <div class="date"></div>
+        </div>
+
+        <div class="result-icon-container" >
+            <img class="result-icon"  src="" alt="">
+        </div>
+
+        <div class="temperature">
+            <div class="temp-deg hide">
+                <div class="temp">
+                </div>
+                <div class="degree-icon"></div>
+            </div>
+            <div class="condition"></div>
+            <div class="feels-like"></div>
+
+        </div>
+
+        <div class="result-bar">
+            <div class="humidity"> 
+                <img class="bar-images" src="humidity.png" alt="humidity-icon">
+                <div class="humidity-value"></div>
+            </div>
+            <div class="wind">
+                <img class="bar-images" src="wind.png" alt="wind-icon">
+                <div class="wind-value"></div>
+            </div>
+            <div class="pressure">
+                <img class="bar-images" src="pressure.png" alt="wind-icon">
+                <div class="pressure-value"></div>
+            </div>
+        </div>
+
+        <div class="today">
+            <div class="today-title">Today</div>
+            <div class="boxes">
+                <div class="today-box-1">
+                        <div class="box-time">Now</div>
+                        <img class="today-box-1-icon" src="" alt="">
+                        <div id="box-1-temp" class="box-temp"></div>
+                </div>
+                <div class="today-box-2"> 
+                        <div id="box-2-time" class="box-time"></div>
+                        <img class="today-box-2-icon" src="" alt="">
+                        <div id="box-2-temp" class="box-temp"></div>
+                </div>
+                <div class="today-box-3">
+                        <div id="box-3-time" class="box-time"></div>
+                        <img class="today-box-3-icon" src="" alt="">
+                        <div id="box-3-temp" class="box-temp"></div>
+                </div>
+                <div class="today-box-4">
+                        <div id="box-4-time" class="box-time"></div>
+                        <img class="today-box-4-icon" src="" alt="">
+                        <div id="box-4-temp" class="box-temp"></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
