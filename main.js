@@ -30,11 +30,6 @@ let todayBoxFourIcon = document.querySelector('.today-box-4-icon')
 // container.classList.add('hide')
 
 
-
-
-
-
-
 check.addEventListener("click", () => {
     let key = `7f05b8e85758de9b916d56bfdaec862e`;
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&units=metric&appid=${key}`;
