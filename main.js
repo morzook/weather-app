@@ -1,4 +1,18 @@
-let startPage = document.querySelector(".welcome");
+let startPage = document.querySelector(".opening-container");
+let defaultCityOne = document.querySelector('.default-city-1')
+let cityOneName = document.getElementById('city-1-name')
+let cityOneIcon = document.querySelector('.city-1-icon')
+let cityOneTemp = document.getElementById('city-1-temp')
+let cityTwoName = document.getElementById('city-2-name')
+let cityTwoIcon = document.querySelector('.city-2-icon')
+let cityTwoTemp = document.getElementById('city-2-temp')
+let cityThreeName = document.getElementById('city-3-name')
+let cityThreeIcon = document.querySelector('.city-3-icon')
+let cityThreeTemp = document.getElementById('city-3-temp')
+let cityFourName = document.getElementById('city-4-name')
+let cityFourIcon = document.querySelector('.city-4-icon')
+let cityFourTemp = document.getElementById('city-4-temp')
+let container = document.querySelector(".container");
 let city = document.getElementById("city");
 let check = document.querySelector(".check");
 let cityName = document.querySelector(".city");
@@ -27,10 +41,135 @@ let todayBoxTwoIcon = document.querySelector('.today-box-2-icon')
 let todayBoxThreeIcon = document.querySelector('.today-box-3-icon')
 let todayBoxFourIcon = document.querySelector('.today-box-4-icon')
 
-// container.classList.add('hide')
+startPage.classList.remove('hide')
+container.classList.add('hide')
+
+
+// let key = `7f05b8e85758de9b916d56bfdaec862e`;
+let url = `https://api.openweathermap.org/data/2.5/weather?q=lagos&lang=en&units=metric&appid=7f05b8e85758de9b916d56bfdaec862e`;
+fetch(url).then(response => {
+    return response.json();
+})
+.then(startData => {
+ cityOneName.innerText = 'Lagos';
+ cityOneTemp.innerText = Math.round(startData.main.temp);
+
+
+ startData.weather.forEach(items => {
+    if (items.id < 250) {
+        cityOneIcon.src = 'storm.PNG';
+    } else if (items.id < 350) {
+        cityOneIcon.src = 'drizzle.PNG';
+    } else if (items.id < 550) {
+        cityOneIcon.src = 'rain.PNG';
+    } else if (items.id < 650) {
+        cityOneIcon.src = 'snow.PNG';
+    } else if (items.id < 800) {
+        cityOneIcon.src = 'drizzle.PNG';
+    }else if (items.id === 800) {
+        cityOneIcon.src = 'clear.PNG';
+    } else if (items.id > 800) {
+        cityOneIcon.src = 'scattered clouds.PNG';
+    }
+
+})
+
+let url = `https://api.openweathermap.org/data/2.5/weather?q=london&lang=en&units=metric&appid=7f05b8e85758de9b916d56bfdaec862e`;
+fetch(url).then(response => {
+    return response.json();
+})
+.then(startDataTwo => {
+ cityTwoName.innerText = 'London';
+ cityTwoTemp.innerText = Math.round(startDataTwo.main.temp);
+
+
+ startDataTwo.weather.forEach(items => {
+    if (items.id < 250) {
+        cityTwoIcon.src = 'storm.PNG';
+    } else if (items.id < 350) {
+        cityTwoIcon.src = 'drizzle.PNG';
+    } else if (items.id < 550) {
+        cityTwoIcon.src = 'rain.PNG';
+    } else if (items.id < 650) {
+        cityTwoIcon.src = 'snow.PNG';
+    } else if (items.id < 800) {
+        cityTwoIcon.src = 'drizzle.PNG';
+    }else if (items.id === 800) {
+        cityTwoIcon.src = 'clear.PNG';
+    } else if (items.id > 800) {
+        cityTwoIcon.src = 'scattered clouds.PNG';
+    }
+
+})
+})
+
+let dataThree = `https://api.openweathermap.org/data/2.5/weather?q=sydney&lang=en&units=metric&appid=7f05b8e85758de9b916d56bfdaec862e`;
+fetch(dataThree).then(response => {
+    return response.json();
+})
+.then(startDataThree => {
+ cityThreeName.innerText = 'sydney';
+ cityThreeTemp.innerText = Math.round(startDataThree.main.temp);
+
+ startDataThree.weather.forEach(items => {
+    if (items.id < 250) {
+        cityThreeIcon.src = 'storm.PNG';
+    } else if (items.id < 350) {
+        cityThreeIcon.src = 'drizzle.PNG';
+    } else if (items.id < 550) {
+        cityThreeIcon.src = 'rain.PNG';
+    } else if (items.id < 650) {
+        cityThreeIcon.src = 'snow.PNG';
+    } else if (items.id < 800) {
+        cityThreeIcon.src = 'drizzle.PNG';
+    }else if (items.id === 800) {
+        cityThreeIcon.src = 'clear.PNG';
+    } else if (items.id > 800) {
+        cityThreeIcon.src = 'scattered clouds.PNG';
+    }
+
+})
+})
+
+let dataFour = `https://api.openweathermap.org/data/2.5/weather?q=tokyo&lang=en&units=metric&appid=7f05b8e85758de9b916d56bfdaec862e`;
+fetch(dataFour).then(response => {
+    return response.json();
+})
+.then(startDataFour => {
+ cityFourName.innerText = 'tokyo';
+ cityFourTemp.innerText = Math.round(startDataFour.main.temp);
+
+ startDataFour.weather.forEach(items => {
+    if (items.id < 250) {
+        cityFourIcon.src = 'storm.PNG';
+    } else if (items.id < 350) {
+        cityFourIcon.src = 'drizzle.PNG';
+    } else if (items.id < 550) {
+        cityFourIcon.src = 'rain.PNG';
+    } else if (items.id < 650) {
+        cityFourIcon.src = 'snow.PNG';
+    } else if (items.id < 800) {
+        cityFourIcon.src = 'drizzle.PNG';
+    }else if (items.id === 800) {
+        cityFourIcon.src = 'clear.PNG';
+    } else if (items.id > 800) {
+        cityFourIcon.src = 'scattered clouds.PNG';
+    }
+
+})
+})
+
+
+
+
+})
+
+
 
 
 check.addEventListener("click", () => {
+    startPage.classList.add('hide')
+    container.classList.remove('hide')
     let key = `7f05b8e85758de9b916d56bfdaec862e`;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&units=metric&appid=${key}`;
     fetch(url).then(response => {

@@ -7,10 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- <div class="welcome hide">
-        <p>get weather results</p>
-    </div> -->
-    <div class="container">
+    
+    <div class="opening-container hide">
+        <div class="opening-search-box">
+            <input class="opening-city" type="text" id="city" placeholder="City">
+            <button class="check">check weather</button>
+        </div>
+        <div class="default-cities">
+            <div class="default-city-1">
+                <div id="city-1-name" class="default-city-name"></div>
+                    <img class="city-1-icon" src="" alt="">
+                <div id="city-1-temp" class="default-city-temp"></div>
+            </div>
+
+            <div class="default-city-2">
+                <div id="city-2-name" class="default-city-name"></div>
+                <img class="city-2-icon" src="" alt="">
+                <div id="city-2-temp" class="default-city-temp"></div>
+            </div>
+
+            <div class="default-city-3">
+                <div id="city-3-name" class="default-city-name"></div>
+                <img class="city-3-icon" src="" alt="">
+                <div id="city-3-temp" class="default-city-temp"></div>
+            </div>
+
+            <div class="default-city-4">
+                <div id="city-4-name" class="default-city-name"></div>
+                <img class="city-4-icon" src="" alt="">
+                <div id="city-4-temp" class="default-city-temp"></div>
+            </div>
+        
+        </div>
+
+    </div>
+
+    <div class="container hide">
         <div class="search-box">
             <input type="text" id="city" placeholder="City">
             <button class="check">check weather</button>
@@ -52,7 +84,6 @@
         </div>
 
         <div class="today">
-            <!-- <div class="today-title">Today</div> -->
             <div class="boxes">
                 <div class="today-box-1">
                         <div class="box-time">Now</div>

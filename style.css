@@ -8,9 +8,9 @@ body{
     align-items: center;
 }
 
-.container{
+.container, .opening-container{
     background-color: #032666;
-    width: 500px;
+    width: 40%;
     height: 90%;
     display: flex;
     flex-direction: column;
@@ -18,6 +18,100 @@ body{
     justify-content: space-around;
     align-items: center;
     border-radius: 10px ;
+}
+
+/* SMALL SCREENS, LAPTOPS */
+@media only screen and (max-width: 1024px) {
+.container, .opening-container{
+    width: 40%;
+    height: 90%;
+  } 
+} 
+
+ /* iPADS, TABLETS */
+ @media only screen and (max-width: 768px) {
+       
+} 
+
+ /* MOBILE LANDSCAPE */
+ @media (max-width: 750px) and (max-height: 500px) and (orientation: landscape) { 
+   
+
+} 
+
+/* MOBILE PHONE POTRAIT */
+@media only screen and (max-width: 480px) { 
+    .container, .opening-container{
+        width: 95%;
+        height: 90%;
+        }
+
+}
+
+.opening-search-box{
+    border: 1px solid red;
+    height: 40%;
+    width: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.default-cities{
+    height: 60%;
+    width: 99%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.default-city-1, .default-city-2, .default-city-3, .default-city-4{
+/* border: 1px solid pink; */
+background-color: #425d8e;
+border-radius: 5%;
+width: 45%;
+height: 45%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+justify-content: space-around;
+
+}
+
+.default-city-name{
+    /* border: 1px solid purple; */
+    width: 95%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city-1-icon, .city-2-icon, .city-3-icon, .city-4-icon{
+    /* border: 1px solid rgb(249, 253, 11); */
+    width: 45%;
+    height: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.default-city-temp{
+    /* border: 1px solid pink; */
+    width: 50%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    
 }
 
 .search-box{
@@ -36,7 +130,8 @@ input{
 }
 
 .hide{
-    visibility: hidden;
+    /* visibility: hidden; */
+    display: none;
 }
 
 .check{
