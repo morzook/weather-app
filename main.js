@@ -1,4 +1,5 @@
 let startPage = document.querySelector(".opening-container");
+let defaultCities = document.querySelector('.default-cities')
 let defaultCityOne = document.querySelector('.default-city-1')
 let cityOneName = document.getElementById('city-1-name')
 let cityOneIcon = document.querySelector('.city-1-icon')
@@ -12,7 +13,7 @@ let cityThreeTemp = document.getElementById('city-3-temp')
 let cityFourName = document.getElementById('city-4-name')
 let cityFourIcon = document.querySelector('.city-4-icon')
 let cityFourTemp = document.getElementById('city-4-temp')
-let container = document.querySelector(".container");
+let resultContainer = document.querySelector(".result-container");
 let city = document.getElementById("city");
 let check = document.querySelector(".check");
 let cityName = document.querySelector(".city");
@@ -41,11 +42,10 @@ let todayBoxTwoIcon = document.querySelector('.today-box-2-icon')
 let todayBoxThreeIcon = document.querySelector('.today-box-3-icon')
 let todayBoxFourIcon = document.querySelector('.today-box-4-icon')
 
-startPage.classList.remove('hide')
-container.classList.add('hide')
+startPage.classList.remove('hide');
+resultContainer.classList.add('hide');
 
 
-// let key = `7f05b8e85758de9b916d56bfdaec862e`;
 let url = `https://api.openweathermap.org/data/2.5/weather?q=lagos&lang=en&units=metric&appid=7f05b8e85758de9b916d56bfdaec862e`;
 fetch(url).then(response => {
     return response.json();
@@ -169,7 +169,8 @@ fetch(dataFour).then(response => {
 
 check.addEventListener("click", () => {
     startPage.classList.add('hide')
-    container.classList.remove('hide')
+    // defaultCities.classList.add('hide')
+    resultContainer.classList.remove('hide')
     let key = `7f05b8e85758de9b916d56bfdaec862e`;
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=en&units=metric&appid=${key}`;
     fetch(url).then(response => {
@@ -231,7 +232,7 @@ todayBoxOneIcon.src = 'clear.PNG';
 })
 
 
-.catch (err => alert('Wrong City Name'))
+// .catch (err => alert('Wrong City Name'))
 
 
 fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city.value}&lang=en&units=metric&appid=${key}`)
