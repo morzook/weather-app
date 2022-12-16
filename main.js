@@ -232,7 +232,7 @@ todayBoxOneIcon.src = 'clear.PNG';
 })
 
 
-// .catch (err => alert('Wrong City Name'))
+.catch (err => alert('Wrong City Name'))
 
 
 fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${city.value}&lang=en&units=metric&appid=${key}`)
