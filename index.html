@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="app-body">
-        <div class="search-box-container">
+        <div class="search-box-container" data-aos="zoom-in-down">
             <div class="search-box">
                 <input type="text" id="city" placeholder="City">
                 <button class="check">
@@ -21,25 +21,25 @@
         </div>
         <div class="opening-container hide" >
             <div class="default-cities" >
-                <div class="default-city-1">
+                <div class="default-city-1" data-aos="slide-right">
                     <div id="city-1-name" class="default-city-name"></div>
                         <img class="city-1-icon" src="" alt="">
                     <div id="city-1-temp" class="default-city-temp"></div>
                 </div>
     
-                <div class="default-city-2" >
+                <div class="default-city-2" data-aos="slide-left" >
                     <div id="city-2-name" class="default-city-name"></div>
                     <img class="city-2-icon" src="" alt="">
                     <div id="city-2-temp" class="default-city-temp"></div>
                 </div>
     
-                <div class="default-city-3">
+                <div class="default-city-3" data-aos="slide-right">
                     <div id="city-3-name" class="default-city-name"></div>
                     <img class="city-3-icon" src="" alt="">
                     <div id="city-3-temp" class="default-city-temp"></div>
                 </div>
     
-                <div class="default-city-4">
+                <div class="default-city-4" data-aos="slide-left">
                     <div id="city-4-name" class="default-city-name"></div>
                     <img class="city-4-icon" src="" alt="">
                     <div id="city-4-temp" class="default-city-temp"></div>
@@ -59,7 +59,7 @@
     
             <div class="temperature">
                 <div class="temp-deg">
-                    <div class="temp">
+                    <div class="temp" >
                     </div>
                     <div class="degree-icon"></div>
                 </div>
@@ -83,7 +83,7 @@
                 </div>
             </div>
     
-            <div class="today" >
+            <div class="today">
                 <div class="boxes">
                     <div class="today-box-1">
                             <div class="box-time">Now</div>
@@ -116,7 +116,7 @@
     <script src="main.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
-      </script>
+      AOS.init();
+    </script>
 </body>
 </html>
